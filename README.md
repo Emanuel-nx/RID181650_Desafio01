@@ -90,7 +90,7 @@ open index.html
 
 O projeto está hospedado no **Netlify** com deploy contínuo via repositório GitHub.
 
-- 🌐 **Site:** [https://seu-site.netlify.app](https://seu-site.netlify.app)
+- 🌐 **Site:** [[https://seu-site.netlify.app](https://ephemeral-pixie-e6715f.netlify.app/)](https://ephemeral-pixie-e6715f.netlify.app/)
 - 📊 **Planilha:** [Google Sheets — Respostas do Formulário](https://docs.google.com/spreadsheets/d/seu-id-aqui)
 
 > Atualize os links acima com as URLs reais do seu projeto.
