@@ -15,7 +15,7 @@ O projeto consiste em uma landing page responsiva criada com **HTML puro e CSS**
 O design foi baseado no protótipo disponibilizado no Figma:
 
 - **Cores:** `#303030` (escuro), `#F9F9F9` (claro), `#FFFFFF` (branco), `#C8952A` (acento dourado)
-- **Tipografia:** [Inter](https://fonts.google.com/specimen/Inter) — Google Fonts
+- **Tipografia:** [Inter] — Google Fonts
 - **Responsivo:** adaptado para telas a partir de 768px
 
 ---
@@ -63,7 +63,7 @@ O formulário envia dados para o **Google Sheets** utilizando o serviço [SheetM
 ### Endpoint
 
 ```
-https://api.sheetmonkey.io/form/DW2jBK6mUGV5Xa1f8Pria
+https://api.sheetmonkey.io/form/...
 ```
 
 > ⚠️ Para trocar a planilha de destino, basta substituir o ID no `action` do `<form>` e garantir que os cabeçalhos da nova planilha sejam `Name`, `Email` e `Created`.
@@ -76,7 +76,7 @@ Não há dependências ou build necessário. Basta abrir o arquivo no navegador:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone
 
 # Abra o arquivo no navegador
 cd seu-repositorio
@@ -90,8 +90,8 @@ open index.html
 
 O projeto está hospedado no **Netlify** com deploy contínuo via repositório GitHub.
 
-- 🌐 **Site:** [[https://seu-site.netlify.app](https://ephemeral-pixie-e6715f.netlify.app/)](https://ephemeral-pixie-e6715f.netlify.app/)
-- 📊 **Planilha:** [Google Sheets — Respostas do Formulário](https://docs.google.com/spreadsheets/d/seu-id-aqui)
+- 🌐 **Site:** [(https://ephemeral-pixie-e6715f.netlify.app/)](https://ephemeral-pixie-e6715f.netlify.app/)
+- 📊 **Planilha:** [Google Sheets)
 
 > Atualize os links acima com as URLs reais do seu projeto.
 
