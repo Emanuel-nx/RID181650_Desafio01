@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquitetura — Tradição em projetos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark: #303030;
+      --light: #F9F9F9;
+      --white: #ffffff;
+      --accent: #C8952A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--dark);
+      padding: 72px 64px 96px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      max-width: 560px;
+    }
+
+    .hero p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ── STATS ── */
+    .stats-section {
+      background: var(--light);
+      padding: 56px 64px 48px;
+    }
+
+    .stats-grid {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .stat-item {
+      flex: 1;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--white);
+      padding: 72px 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-left h2 {
+      font-size: clamp(22px, 2.8vw, 34px);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .about-left p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #666;
+    }
+
+    .about-right {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .about-right img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      background: var(--dark);
+      padding: 80px 64px;
+      text-align: center;
+    }
+
+    .form-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 36px;
+    }
+
+    .form-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 400px;
+      margin: 0 auto 28px;
+    }
+
+    .form-fields input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--white);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-fields input::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .form-fields input:focus {
+      border-color: var(--accent);
+    }
+
+    .btn-cta {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 16px 60px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-cta:hover {
+      opacity: 0.88;
+      transform: translateY(-2px);
+    }
+
+    .form-success {
+      display: none;
+      color: #7ed4a7;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1e1e1e;
+      padding: 28px 64px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { padding: 48px 24px 64px; }
+
+      .stats-section { padding: 40px 24px 36px; }
+      .stats-grid { flex-direction: column; gap: 32px; }
+
+      .about-section {
+        grid-template-columns: 1fr;
+        padding: 56px 24px;
+        gap: 36px;
+      }
+
+      .about-right img { height: 220px; }
+
+      .form-section { padding: 56px 24px; }
+
+      footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Tradição em projetos de arquitetura</h1>
+  <p>Arquitetura residencial e comercial.</p>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number">850</span>
+      <span class="stat-label">empreendimentos construídos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">40</span>
+      <span class="stat-label">anos de mercado e experiência</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2,000,000</span>
+      <span class="stat-label">m² em projetos construídos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-left">
+    <h2>Arquitetos com História e Experiência.</h2>
+    <p>Nós realizamos desde 2002 projetos e gerenciamento de obras. Com mais de 800 projetos e 2.000.000 de m² construídos, tendo como principal proposta transformar em realidade os sonhos de seus clientes, criando projetos personalizados, unindo a tradição e a modernidade em nossos projetos.</p>
+  </div>
+  <div class="about-right">
+    <img
+      src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800&h=320&fit=crop"
+      alt="Interior arquitetônico moderno"
+    />
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="form-section">
+  <h2>Conheça mais sobre nossos serviços:</h2>
+  <form id="contactForm" action="https://api.sheetmonkey.io/form/DW2jBK6mUGV5Xa1f8Pria" method="POST">
+    <div class="form-fields">
+      <input type="text"  name="Name"  placeholder="Nome"  required />
+      <input type="email" name="Email" placeholder="Email" required />
+      <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+    </div>
+    <button type="submit" class="btn-cta">Fale Conosco</button>
+    <p class="form-success" id="formSuccess">✓ Mensagem enviada com sucesso!</p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2024 — Arquitetura & Projetos. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('formSuccess');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-cta');
+    const original = btn.textContent;
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    // Preenche o timestamp automaticamente
+
+    try {
+      await fetch(form.action, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new FormData(form)
+      });
+
+      // no-cors não retorna status — assumimos sucesso se não lançar exceção
+      successMsg.style.display = 'block';
+      form.reset();
+      btn.textContent = 'Enviado ✓';
+    } catch (err) {
+      alert('Erro ao enviar. Verifique sua conexão e tente novamente.');
+      btn.textContent = original;
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
